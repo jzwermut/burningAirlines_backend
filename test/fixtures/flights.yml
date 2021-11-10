@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  flightDate: 2021-11-09
+  plane_id: 1
+  departure_date: 2021-11-10
   origin: MyString
   destination: MyString
-  seats: MyText
 
 two:
-  flightDate: 2021-11-09
+  plane_id: 1
+  departure_date: 2021-11-10
   origin: MyString
   destination: MyString
-  seats: MyText

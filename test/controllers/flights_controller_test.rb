@@ -17,7 +17,7 @@ class FlightsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create flight" do
     assert_difference('Flight.count') do
-      post flights_url, params: { flight: { destination: @flight.destination, flightDate: @flight.flightDate, origin: @flight.origin, seats: @flight.seats } }
+      post flights_url, params: { flight: { departure_date: @flight.departure_date, destination: @flight.destination, origin: @flight.origin, plane_id: @flight.plane_id } }
     end
 
     assert_redirected_to flight_url(Flight.last)
@@ -34,7 +34,7 @@ class FlightsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update flight" do
-    patch flight_url(@flight), params: { flight: { destination: @flight.destination, flightDate: @flight.flightDate, origin: @flight.origin, seats: @flight.seats } }
+    patch flight_url(@flight), params: { flight: { departure_date: @flight.departure_date, destination: @flight.destination, origin: @flight.origin, plane_id: @flight.plane_id } }
     assert_redirected_to flight_url(@flight)
   end
 

@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  rows: 1
-  columns: 1
+  rows: 
+  cols: 
 
 two:
   name: MyString
-  rows: 1
-  columns: 1
+  rows: 
+  cols: 

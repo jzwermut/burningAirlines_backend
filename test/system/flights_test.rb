@@ -14,10 +14,10 @@ class FlightsTest < ApplicationSystemTestCase
     visit flights_url
     click_on "New Flight"
 
+    fill_in "Departure date", with: @flight.departure_date
     fill_in "Destination", with: @flight.destination
-    fill_in "Flightdate", with: @flight.flightDate
     fill_in "Origin", with: @flight.origin
-    fill_in "Seats", with: @flight.seats
+    fill_in "Plane", with: @flight.plane_id
     click_on "Create Flight"
 
     assert_text "Flight was successfully created"
@@ -28,10 +28,10 @@ class FlightsTest < ApplicationSystemTestCase
     visit flights_url
     click_on "Edit", match: :first
 
+    fill_in "Departure date", with: @flight.departure_date
     fill_in "Destination", with: @flight.destination
-    fill_in "Flightdate", with: @flight.flightDate
     fill_in "Origin", with: @flight.origin
-    fill_in "Seats", with: @flight.seats
+    fill_in "Plane", with: @flight.plane_id
     click_on "Update Flight"
 
     assert_text "Flight was successfully updated"

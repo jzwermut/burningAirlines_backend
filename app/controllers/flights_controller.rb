@@ -8,6 +8,9 @@ class FlightsController < ApplicationController
 
   # GET /flights/1 or /flights/1.json
   def show
+    flight = Flight.find params[:id]
+    reservations = Reservation.where params[:flight_id]
+    return reservations
   end
 
   # GET /flights/new
@@ -64,6 +67,6 @@ class FlightsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def flight_params
-      params.require(:flight).permit(:flightDate, :origin, :destination, :seats)
+      params.require(:flight).permit(:plane_id, :departure_date, :origin, :destination)
     end
 end

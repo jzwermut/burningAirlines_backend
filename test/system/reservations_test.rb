@@ -15,6 +15,7 @@ class ReservationsTest < ApplicationSystemTestCase
     click_on "New Reservation"
 
     fill_in "Flight", with: @reservation.flight_id
+    fill_in "Seat", with: @reservation.seat
     fill_in "User", with: @reservation.user_id
     click_on "Create Reservation"
 
@@ -27,6 +28,7 @@ class ReservationsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Flight", with: @reservation.flight_id
+    fill_in "Seat", with: @reservation.seat
     fill_in "User", with: @reservation.user_id
     click_on "Update Reservation"
 
